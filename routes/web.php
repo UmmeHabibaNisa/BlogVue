@@ -30,7 +30,9 @@ Route::get('/newBlog', function () {
 Route::get('/admin', function () {
     return view('adminview');
 });
-
+Route::get('/edit', function () {
+    return view('blogedit');
+});
 
 
 

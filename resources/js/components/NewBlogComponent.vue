@@ -34,6 +34,7 @@
 </template>
 
 <script>
+
     export default {
         name: 'blog',
         mounted() {
@@ -51,6 +52,7 @@
                 category:''   
            }
         },
+    
         methods:{
             async saveImage(){
                

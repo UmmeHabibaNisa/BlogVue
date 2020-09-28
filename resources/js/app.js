@@ -4,9 +4,9 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-Vue.use(VueRouter)
-
+// import VueRouter from 'vue-router'
+// Vue.use(VueRouter)
+// import NewBlogComponent from './components/NewBlogComponent'
 
 require('./bootstrap');
 
@@ -24,20 +24,23 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('newblog', require('./components/NewBlogComponent.vue').default);
+Vue.component('newblog', require('./components/NewBlogComponent.vue').default);                                                                                                                                                                                                                                                                 
 Vue.component('blog', require('./components/BlogShow.vue').default);
 Vue.component('home', require('./components/BlogMain.vue').default);
 Vue.component('admin', require('./components/AdminViewComponent.vue').default);
 
-const router = new VueRouter({
-    mode: 'history',
-    routes: [
-        {
-            path: '/newBlog',
-            name: 'edit',
-        },
-    ],
-});
+
+
+// const router = new VueRouter({
+//     mode: 'history',
+//     routes: [    
+//         {
+//             path: '/newBlog',
+//             name: 'edit',
+//             component :NewBlogComponent,
+//         },
+//     ],
+// });
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -48,5 +51,5 @@ const router = new VueRouter({
 const app = new Vue({
     el: '#app',
 
-    router,
+    // router,
 });
